@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #273c45;
+    overflow: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: black;
+}
+
+.active {
+    background: red
+
+}
+
+.jumbotron {
+    background-image: url(./img/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+
+.card {
+    height: 480px;
+    width: 350px;
+    border: 2px solid black;
+    display: inline-block;
+    margin: 7px;
+    border-radius: 10px;
+    transition: 1s;
+    box-shadow: 0px 4px 8px black;
+}
+.desc{
+    margin:0 10px 0 10px; 
+}
+.card-img{
+    width:100%;
+    border-radius: 9px 9px 0 0;
+    
+}
+.card:hover{
+    box-shadow: 10px 10px 20px black;
+
+}
+#reg-img
+{
+    background-image: url("img/banner1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 460px;
+    width:750px;
+    margin: 3px;
+}
+.footer {
+    height: 50px;
+    background-color: #273c45;
+    color: white;
+    margin-top: 10px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.char-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 90px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
