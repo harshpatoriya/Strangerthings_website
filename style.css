@@ -10,7 +10,6 @@
     overflow: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    border-radius: 10px;
 }
 
 .navbar a {
@@ -31,7 +30,7 @@
 }
 
 .jumbotron {
-    background-image: url(./img/banner.jpg);
+    background-image: url("./img/banner3.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
