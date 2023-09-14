@@ -10,6 +10,37 @@
     <title>Stranger Things</title>
 
 </head>
+<script>
+    function validate() {
+        if (document.myForm.Username.value == "") {
+                alert("Please Enter your Username!");
+                document.myForm.Username.focus();
+                return false;
+            }
+            if (document.myForm.EMail.value == "") {
+                alert("Please Enter your Email");
+                document.myForm.EMail.focus();
+                return false;
+            } else {
+                var emailID = document.myForm.EMail.value;
+                atpos = emailID.indexOf("@");
+
+                dotpos = emailID.lastIndexOf(".");
+
+                if (atpos < 1 || (dotpos - atpos < 2)) {
+                    alert("Please enter correct email ID")
+                    document.myForm.EMail.focus();
+                    return false;
+                }
+            }
+            if (document.myForm.Password.value == "" || isNaN(document.myForm.Password.value) || document.myForm.Password.value.length != 8) {
+                alert("Please Enter Password atleast 8 digit");
+                document.myForm.Password.focus();
+                return false;
+            }
+        return (true);
+    }
+</script>
 
 <body>
 
@@ -37,26 +68,27 @@
 
             <div class="col-sm-6" style="border:2px solid #ef6503">
                 <h2 class="text-center " style="color:#1db1e7 ;margin-top:80px ;margin-bottom:50px">Login</h2>
-                <form class="form-horizontal" action="">
+                <form class="form-horizontal" action="" method="post" name="myForm"
+                onsubmit="return(validate());">
 
                     <div class="form-group">
                         <label class="control-label col-sm-3 label" for="Username">Username :</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="text" id="Username" placeholder="Enter Username">
+                            <input class="form-control" name="Username" type="text" id="Username" placeholder="Enter Username">
                         </div>
                     </div>
                     <br>
                     <div class="form-group">
-                        <label class="control-label col-sm-3 label" for="Email">Email :</label>
+                        <label class="control-label col-sm-3 label" for="EMail">Email :</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="text" id="Email" placeholder="Enter Email">
+                            <input class="form-control" name="EMail" type="text" id="EMail" placeholder="Enter Email">
                         </div>
                     </div>
                     <br>
                     <div class="form-group">
                         <label class="control-label col-sm-3 label" for="Password">Password :</label>
                         <div class="col-sm-9">
-                            <input class="form-control" type="text" id="Password" placeholder="Enter Password">
+                            <input class="form-control" name="Password" type="password" id="Password" placeholder="Enter Password">
                         </div>
                     </div>
                     <br>
@@ -71,7 +103,7 @@
                     <br>
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-9">
-                            <button type="button" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </div>
                 </form>
@@ -82,56 +114,57 @@
 
     <footer>
         <div class="foot-panel2">
-          <ul>
-            <p>Help</p>
-            <a href="">Customer Service</a>
-            <a href="">FAQs</a>
-            <a href="">Accessibility</a>
-          </ul>
-          <ul>
-            <p>International</p>
-            <a href="">Tracking</a>
-            <a href="">FAQs</a>
-            <a href="">Returns</a>
-          </ul>
-          <ul>
-            <p>Orders</p>
-            <a href="">Track My Order</a>
-            <a href="">Shipping & Delivery</a>
-            <a href="">Terms of Service</a>
-            <a href="">Returns Policy</a>
-            <a href="">Refund Policy</a>
-          </ul>
-         <ul>
-          <p>Sign Up</p>
-          <div class="form-group">
-            <div class="row">
-            <div class="col-sm-10">
-                <input class="form-control" type="text" id="Email" placeholder="Enter Email Address">
-                <br>
-                <button type="button" class="btn btn-primary " style="text-decoration: none;">
-                  <a style="color: white;" href="https://en.wikipedia.org/wiki/Winona_Ryder" target="_blank">Sign up</a>
-                </button>
-            </div>
-          </div>
+            <ul>
+                <p>Help</p>
+                <a href="">Customer Service</a>
+                <a href="">FAQs</a>
+                <a href="">Accessibility</a>
+            </ul>
+            <ul>
+                <p>International</p>
+                <a href="">Tracking</a>
+                <a href="">FAQs</a>
+                <a href="">Returns</a>
+            </ul>
+            <ul>
+                <p>Orders</p>
+                <a href="">Track My Order</a>
+                <a href="">Shipping & Delivery</a>
+                <a href="">Terms of Service</a>
+                <a href="">Returns Policy</a>
+                <a href="">Refund Policy</a>
+            </ul>
+            <ul>
+                <p>Sign Up</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <input class="form-control" type="text" id="Email" placeholder="Enter Email Address">
+                            <br>
+                            <button type="button" class="btn btn-primary " style="text-decoration: none;">
+                                <a style="color: white;" href="https://en.wikipedia.org/wiki/Winona_Ryder"
+                                    target="_blank">Sign up</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </ul>
         </div>
-         </ul>
-        </div>
- 
+
         <div class="foot-panel4">
-          <div class="pages">
-            <a href="">Privacy</a>
-            <a href="">Terms & Conditions</a>
-            <a href="">Cookie Preferences</a>
-          </div>
-          <div class="copyright">
-            &copy; 2023 Stranger Things,inc
-          </div>
+            <div class="pages">
+                <a href="">Privacy</a>
+                <a href="">Terms & Conditions</a>
+                <a href="">Cookie Preferences</a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Stranger Things,inc
+            </div>
         </div>
-    
+
         <div class="footer-line-break"></div>
-    
-      </footer>
+
+    </footer>
 
     <script src="Bootstrap/bootstrap.min.js"></script>
 </body>
