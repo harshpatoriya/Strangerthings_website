@@ -59,7 +59,6 @@ body {
     display: inline-block;
     margin: 7px;
     border-radius: 10px;
-    transition: 1s;
     box-shadow: 0px 4px 8px #1db1e7;
 }
 
@@ -82,7 +81,8 @@ body {
 }
 
 .card:hover {
-    box-shadow: 10px 10px 20px black;
+    transition: 0.8s;
+    box-shadow: 10px 14px 18px #1db1e7;
 
 }
 
@@ -116,7 +116,7 @@ body {
 }
 
 .box:hover {
-    transition: 1s;
+    transition: 0.8s;
     box-shadow: 16px 10px 8px #1de75d;
 }
 
